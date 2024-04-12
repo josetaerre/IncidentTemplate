@@ -1,0 +1,15 @@
+// Categories
+GET http://localhost:4004/odata/v4/catalog/
+
+
+### Templates
+http://localhost:4004/odata/v4/catalog/GetTemplate
+
+###
+http://localhost:4004/odata/v4/catalog/GetTemplate('201')?$expand=selectable
+
+###
+http://localhost:4004/odata/v4/catalog/GetSelectable
+
+
+
