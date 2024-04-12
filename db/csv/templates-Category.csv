@@ -1,0 +1,4 @@
+id, text, country_code, language_code
+101, Electronic Invoice, GT, EN
+105, Factura Electronica, GT, ES
+102, POSs, SV, EN
