@@ -12,16 +12,19 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.8",
     "cds-plugin-ui5": "^0.6.13"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-templateforincident": "cds watch --open templateforincident/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/project1"
+    "app/project1",
+    "app/templateforincident"
   ]
 }

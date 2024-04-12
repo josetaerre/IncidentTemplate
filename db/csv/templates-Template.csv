@@ -1,4 +1,4 @@
-id, text, category_id
+id, text, to_category_id
 201, Failed to create on system, 101
 204, Error al crearlo en el sistema, 105
 209, Broke down, 102
