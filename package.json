@@ -18,13 +18,16 @@
   "scripts": {
     "start": "cds-serve",
     "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-templateforincident": "cds watch --open templateforincident/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-templateforincident": "cds watch --open templateforincident/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-template1": "cds watch --open template1/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "workspaces": [
     "app/*"
   ],
   "sapux": [
     "app/project1",
-    "app/templateforincident"
+    "app/templateforincident",
+    "app/template1",
+    "app/template1"
   ]
 }
