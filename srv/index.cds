@@ -5,9 +5,28 @@ annotate CatalogService.GetCatalog with @(
         
         // Search bars
         Identification: [ {Value: text} ],
-        
-        SelectionFields: [ text],
-        
+            // SelectionFields: [ title ], // Custom filter search fields
+
+            // Header info  of the list (title of the list) and of the object page (when an item is clicked on the list os complaints and navigating)
+            HeaderInfo: {
+                TypeName: '{i18n>Incident}',
+                TypeNamePlural: '{i18n>Incidents}',
+
+                ImageUrl : '../dollarcity.png',
+
+                @title: '{i18n>Incident}',
+                Title: {
+                    Value: text
+                },
+
+                @description: '{i18n>Country}',
+                Description: {
+                    Value: country.descr,
+                    Label: '{i18n>Language}'
+                }
+            },
+
+            // List of items of the Complaint entity service
         LineItem: [
             {
                 Value: id
@@ -25,5 +44,79 @@ annotate CatalogService.GetCatalog with @(
                 Label: '{i18n>LanguageTitle}'
             }
         ]
+    },
+
+        UI.Facets: [
+            {
+                $Type: 'UI.ReferenceFacet',
+                Label: '{i18n>CategoryFacetGroup}',
+                Target: '@UI.FieldGroup#CategoryHeader'
+            }, 
+            {
+                $Type: 'UI.ReferenceFacet',
+                Label: '{i18n>ToTemplatesFacetGroup}',
+                Target: 'to_templates/@UI.LineItem'
+            }  
+        ],
+
+        UI.FieldGroup#CategoryHeader: {
+            Data: [                
+                {
+                    Label: '{i18n>Incident}',
+                    Value: id
+                },
+                {
+                    Label: '{i18n>IncentTitle}',
+                    Value: text
+                },
+                {
+                    Label: '{i18n>Country}',
+                    Value: country.name
+                },
+                {
+                    Label: '{i18n>Language}',
+                    Value: language.name
+                }
+            ]
+        }
+);
+
+annotate CatalogService.GetTemplate with @(
+    UI: {
+            // Search bars
+            SelectionFields: [ ], // No custom filter search fields
+
+
+            // Header info  of the list (title of the list) and of the object page (when an item is clicked on the list os complaints and navigating)
+            HeaderInfo: {
+                TypeName: '{i18n>Template}',
+                TypeNamePlural: '{i18n>Templates}',
+
+                ImageUrl : '../dollarcity.png',
+
+                @title: '{i18n>IncentTitle}',
+                Title: {
+                    Value: text,
+                    Label: '{i18n>IncentTitle}'
+                },
+
+                @description: '{i18n>ResolutionId}',
+                Description: {
+                    Value: id
+                    , Label: '{i18n>ComplaintId}'
+                }
+            },
+
+            // List of items of the Complaint entity service
+            LineItem: [
+                {
+                    Label: '{i18n>Incident}',
+                    Value: id
+                },
+                {
+                    Label: '{i18n>IncentTitle}',
+                    Value: text
+                }
+            ]
     }
 );
