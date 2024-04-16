@@ -1,4 +1,4 @@
-id, text, country_code, language_code
-101, Electronic Invoice, GT, EN
-105, Factura Electronica, GT, ES
-102, POSs, SV, EN
+id, text, country_code, language_code, createdBy, validTo
+101, Electronic Invoice, GT, EN, JSANCHEZ, 2024-05-19T15:34:55+0000
+105, Factura Electronica, GT, ES, JSANCHEZ, 2024-05-19T15:34:55+0000
+102, POSs, SV, EN, JSANCHEZ, 2024-05-19T15:34:55+0000

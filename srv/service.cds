@@ -9,7 +9,7 @@ service CatalogService {
     @Capabilities: { Insertable: true, Deletable: false }
     entity GetTemplate as projection on service.Template {
 		*,
-		null as numberOfBooks: Integer
+		null as number: Integer
 	};
     entity GetSelectable as projection on service.Selectable;
 

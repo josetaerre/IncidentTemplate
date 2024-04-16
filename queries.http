@@ -1,5 +1,5 @@
 // Categories
-GET http://localhost:4004/odata/v4/catalog/
+GET http://localhost:4004/odata/v4/catalog/GetCatalog
 
 
 ### Templates
