@@ -55,7 +55,9 @@ annotate CatalogService.GetCatalog with @(
             {
                 $Type: 'UI.ReferenceFacet',
                 Label: '{i18n>ToTemplatesFacetGroup}',
-                Target: 'to_templates/@UI.LineItem'
+                Target: 'to_templates/@UI.LineItem',
+                @title: '{i18n>Templates}',
+                @description: '{i18n>Template}'
             }  
         ],
 
@@ -84,8 +86,7 @@ annotate CatalogService.GetCatalog with @(
 annotate CatalogService.GetTemplate with @(
     UI: {
             // Search bars
-            SelectionFields: [ ], // No custom filter search fields
-
+            // SelectionFields: [ ], // No custom filter search fields
 
             // Header info  of the list (title of the list) and of the object page (when an item is clicked on the list os complaints and navigating)
             HeaderInfo: {
@@ -118,5 +119,34 @@ annotate CatalogService.GetTemplate with @(
                     Value: text
                 }
             ]
-    }
+    },
+
+        UI.Facets: [
+            {
+                $Type: 'UI.ReferenceFacet',
+                Label:  text, // '{i18n>TemplateFacetGroup}',
+                Target: '@UI.FieldGroup#TemplateHeader'
+            }
+        ],
+
+        UI.FieldGroup#TemplateHeader: {
+            Data: [                
+                {
+                    Label: '{i18n>Incident}',
+                    Value: id
+                },
+                {
+                    Label: '{i18n>IncentTitle}',
+                    Value: text
+                },
+                {
+                    Label: 'Extra Info',
+                    Value: 'Field 1 for extra info'
+                },
+                {
+                    Label: 'More Info',
+                    Value: 'Field 2 for more info'
+                }
+            ]
+        }
 );

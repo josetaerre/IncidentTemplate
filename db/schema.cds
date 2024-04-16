@@ -7,9 +7,15 @@ using { managed, Country, Language } from '@sap/cds/common';
 
  type Identifier: String(3);
 
+ type AvailabilityStatus: Int16 enum {
+  Valid = 1;
+  NotValid = 2;
+};
+
 entity Category: managed {
     key id: Identifier;
     text: String;
+    Status: AvailabilityStatus;
     country: Country;
     language: Language;
     to_templates: Association to many Template on to_templates.to_category = $self;
@@ -28,3 +34,15 @@ entity Selectable: managed, cuid {
     text: String;
     to_template: Association to one Template
 }
+
+
+entity E {
+    key id: Integer; 
+    Price: Integer; 
+    Quantity: Integer; 
+};
+
+view V as select from E {
+    Price * Quantity as PriceQuantity: Integer 
+};
+
