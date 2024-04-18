@@ -40,8 +40,13 @@ entity Template: managed {
 
 entity Selectable: managed, cuid {
     text: String;
-    to_template: Association to one Template
+    to_template: Association to Template
 }
+
+
+
+
+
 
 
 entity E {
