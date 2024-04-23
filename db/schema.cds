@@ -19,8 +19,8 @@ entity Category: managed {
     validTo: Timestamp;
     country: Country;
     language: Language;
-    to_templates: Association to many Template on to_templates.to_category = $self;
-    // to_templates: Composition of many Template on to_templates.to_category = $self;
+    // to_templates: Association to many Template on to_templates.to_category = $self;
+    to_templates: Composition of many Template on to_templates.to_category = $self;
 
     // createdAt  : Timestamp @cds.on.insert: $now;
     // createdBy  : User      @cds.on.insert: $user;

@@ -105,10 +105,13 @@ annotate CatalogService.GetTemplate with @(
                 Description: {
                     Value: id
                     , Label: '{i18n>ComplaintId}'
-                }
+                },
+
+                ![@UI.Importance] : #High,
             },
 
             // List of items of the Complaint entity service
+            
             LineItem: [
                 {
                     Label: '{i18n>Incident}',
