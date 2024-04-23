@@ -29,7 +29,7 @@ annotate CatalogService.GetCatalog with @(
             // List of items of the Complaint entity service
         LineItem: [
             {
-                Value: id
+                Value: ID
             },
             {
                 Value: text,
@@ -65,7 +65,7 @@ annotate CatalogService.GetCatalog with @(
             Data: [                
                 {
                     Label: '{i18n>Incident}',
-                    Value: id
+                    Value: ID
                 },
                 {
                     Label: '{i18n>IncentTitle}',
@@ -103,7 +103,7 @@ annotate CatalogService.GetTemplate with @(
 
                 @description: '{i18n>ResolutionId}',
                 Description: {
-                    Value: id
+                    Value: ID
                     , Label: '{i18n>ComplaintId}'
                 },
 
@@ -115,7 +115,7 @@ annotate CatalogService.GetTemplate with @(
             LineItem: [
                 {
                     Label: '{i18n>Incident}',
-                    Value: id
+                    Value: ID
                 },
                 {
                     Label: '{i18n>IncentTitle}',
@@ -136,7 +136,7 @@ annotate CatalogService.GetTemplate with @(
             Data: [                
                 {
                     Label: '{i18n>Incident}',
-                    Value: id
+                    Value: ID
                 },
                 {
                     Label: '{i18n>IncentTitle}',

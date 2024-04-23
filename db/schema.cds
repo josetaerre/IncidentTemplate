@@ -12,8 +12,8 @@ using { managed, Country, Language } from '@sap/cds/common';
   NotAvailable = 2;
 };
 
-entity Category: managed {
-    key id: Identifier;
+entity Category: managed, cuid {
+    // key id: Identifier;
     text: String;
     status: AvailabilityStatus;
     validTo: Timestamp;
@@ -28,8 +28,8 @@ entity Category: managed {
     // modifiedBy : User      @cds.on.insert: null @cds.on.update: $user;
 }
 
-entity Template: managed {
-    key id: Identifier;
+entity Template: managed, cuid {
+    // key id: Identifier;
     text: String;
     status: AvailabilityStatus;
     validTo: Date;
