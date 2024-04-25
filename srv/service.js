@@ -5,6 +5,10 @@ module.exports = srv => {
         const newCategories = [];
 
         // Catalog.array.forEach(element => {
+        //     newCategories.push(element);
+        // });
+
+        // Catalog.array.forEach(element => {
         //     if (element.validTo > Date.now) {
         //         element.status = 1;
         //     } else {

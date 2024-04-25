@@ -13,7 +13,7 @@ using { managed, Country, Language } from '@sap/cds/common';
 };
 
 entity Category: managed, cuid {
-    // key id: Identifier;
+    // key id: UUID;
     text: String;
     status: AvailabilityStatus;
     validTo: Timestamp;
@@ -37,6 +37,7 @@ entity Template: managed, cuid {
     // to_selectable: Association to many Selectable on to_selectable.to_template = $self;
     to_selectable: Composition of many Selectable on to_selectable.to_template = $self;
 }
+
 
 entity Selectable: managed, cuid {
     text: String;

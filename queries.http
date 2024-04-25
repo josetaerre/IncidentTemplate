@@ -1,14 +1,30 @@
 // Categories
 GET http://localhost:4004/odata/v4/catalog/GetCatalog
 
+###
+GET http://localhost:4004/odata/v4/catalog/GetCatalog(101)
+###
+GET http://localhost:4004/odata/v4/catalog/GetCatalog(id='101',IsActiveEntity=true)
+
+###
+GET http://localhost:4004/odata/v4/catalog/GetCatalog(ID='101',IsActiveEntity=true)
+
+###
+GET http://localhost:4004/odata/v4/catalog/GetCatalog?$expand=to_templates
+
+###
+GET http://localhost:4004/odata/v4/catalog/GetCatalog('101')?$expand=to_templates
 
 ### Templates
 http://localhost:4004/odata/v4/catalog/GetTemplate
 
 ###
-http://localhost:4004/odata/v4/catalog/GetTemplate('201')?$expand=selectable
+http://localhost:4004/odata/v4/catalog/GetTemplate?$expand=to_selectable
 
 ###
+http://localhost:4004/odata/v4/catalog/GetTemplate(ID='209')?$expand=selectable
+
+### Selectables
 http://localhost:4004/odata/v4/catalog/GetSelectable
 
 
