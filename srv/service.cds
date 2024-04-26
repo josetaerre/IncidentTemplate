@@ -21,6 +21,10 @@ service CatalogService {
     //     DeleteRestrictions: {Deletable: true},
     // });
 
+
+
+    
+
     // @odata.draft.enabled
     entity GetTemplate   as
         projection on service.Template {
