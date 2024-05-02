@@ -1,9 +1,8 @@
-module.exports = srv => {
+// module.exports = srv => {
 
-    srv.after ("READ", "GetCatalog", Catalog => {
-        console.log('Service name')
-        const newCategories = [];
-
+    // srv.after ("READ", "GetCatalog", Catalog => {
+    //     console.log('Service name')
+    //     const newCategories = [];
         // Catalog.array.forEach(element => {
         //     newCategories.push(element);
         // });
@@ -16,7 +15,25 @@ module.exports = srv => {
         //     }
         //     newCategories.push(element);
         // });
-        return newCategories;
+        // return newCategories;
         // return [];
-    });
-};
+//     });
+// };
+
+
+const cds = require('@sap/cds')
+module.exports = function (){
+//   this.on ('submitOrder', (req)=>{...}) //> custom actions
+//   this.on ('CREATE',`Books`, (req)=>{...})
+//   this.before ('UPDATE',`*`, (req)=>{...})
+
+//   this.after ('READ','CatalogService', (Category)=>{
+//     const newCategories = [];
+//     Category.array.array.forEach(element => {
+//         console.log('Service name')
+//         newCategories.push(element)
+//     });
+
+//     return newCategories;
+//   })
+}
